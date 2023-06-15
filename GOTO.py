@@ -109,7 +109,7 @@ with tab4:
                
                 # # pisahkan month ke dalam list
                 Days = datas['Days'].tolist()
-                df = data['RF'].tolist()
+                df = datas['RF'].tolist()
                 # data_fix = {}
                 # for i in range(len(label)):
                 #     data_fix['Month'] = month
