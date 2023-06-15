@@ -119,10 +119,10 @@ with tab4:
                 fig, ax = plt.subplots(figsize=(10, 5))
                 ax.grid(True)
                 # for i in range(len(datas)):
-                ax.plot(index)
-                ax.set_xlabel('Month')
-                ax.set_ylabel('Beer Production')
-                ax.set_title('Prediksi Produksi Beer')
+                ax.plot(Days)
+                ax.set_xlabel('Days')
+                ax.set_ylabel('Saham')
+                ax.set_title('Prediksi Saham GOTO')
                 ax.legend()
                 st.pyplot(fig)
 
