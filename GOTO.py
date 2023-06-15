@@ -38,7 +38,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 st.markdown(' <div style="position: fixed; top: 0; left: 0; z-index: 9999; width: 100%; background: rgb(14, 17, 23); ; text-align: center;"><a href="https://github.com/maulanamaib/Streamlit_Uas_PT-Sentral-Mitra-Informatika.git" target="_blank"><button style="border-radius: 12px;position: relative; top:50%; margin:10px;"><i class="fa fa-github"></i> GitHub</button></a></div>', unsafe_allow_html=True)
  
 # insialisasi web
-tab1, tab2, tab3, tab4 = st.tabs(["Data", "Processing Data", "Modelling", "Implementasi"])
+tab1, tab2, tab3, tab4 = st.tabs(["Data", "Prepocessing Data", "Modelling", "Implementasi"])
 with tab1:
     kolom = st.columns((1 , 1.5))   
     st.markdown("<h1 style='text-align: center; color: white; margin:0 ; padding:0;'>Tentang Sistem ini</h1>", unsafe_allow_html=True)
