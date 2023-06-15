@@ -66,7 +66,7 @@ with tab2:
 
 with tab3:
     with st.expander("Setting"):
-        model = st.radio("""Metode Regresi yang digunakan :""",("K-Neighbors Regressor", "Bagging Regressor", "Random Forest Regressor"))
+        model = st.radio("""Metode Regresi yang digunakan :""",("K-Neighbors Regressor", "Stacking Regressor", "Random Forest Regressor"))
     columns = st.columns((2, 0.6, 2))
     submit = columns[1].button("Submit")
     knn = joblib.load('model/KNN.pkl')
