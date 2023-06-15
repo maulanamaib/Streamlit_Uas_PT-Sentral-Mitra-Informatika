@@ -86,7 +86,7 @@ with tab4:
     st.markdown("<h1 style='text-align: center; color: white; margin:0 ; padding:0;'>Prediksi Saham GOTO</h1>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center; color: white;'>Harap Diisi Semua Kolom</p>", unsafe_allow_html=True)
     date = st.date_input("Masukkan Tanggal:",datetime.date(2023, 9, 1))
-    st.write("Range input from: 2023-0901 to 2029-12-30")
+    st.write("Range input from: 2023-09-01 to 2029-12-30")
     columns = st.columns((2, 0.6, 2))
     cek = columns[1].button("submit")
     if cek :
