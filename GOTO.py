@@ -108,7 +108,7 @@ with tab4:
                     datas = data.iloc[index:index+10]
                
                 # # pisahkan month ke dalam list
-                month = datas['Month'].tolist()
+                month = datas['Days'].tolist()
                 # data_fix = {}
                 # for i in range(len(label)):
                 #     data_fix['Month'] = month
@@ -128,8 +128,8 @@ with tab4:
 
                 # # menampilkan hasil prediksi data_fix pada st.table
                 datas = pd.DataFrame(datas)
-                st_date = datas.head(1)['Month'].values[0]
-                en_date = datas.tail(1)['Month'].values[0]
+                st_date = datas.head(1)['Days'].values[0]
+                en_date = datas.tail(1)['Days'].values[0]
                 st.markdown(f"<h3 style='text-align: center; color: white; margin:0 ; padding:0;'>Hasil Prediksi Saham Goto Pada {st_date} - {en_date}</h3>", unsafe_allow_html=True)
                 datas = datas.style.set_properties(**{'text-align': 'center'})
                 datas = datas.set_table_styles([ dict(selector='th', props=[('text-align', 'center')] ) ])
