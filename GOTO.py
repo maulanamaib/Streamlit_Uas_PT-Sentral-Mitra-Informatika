@@ -108,7 +108,7 @@ with tab4:
                     datas = data.iloc[index:index+10]
                
                 # # pisahkan month ke dalam list
-                month = datas['Days'].tolist()
+                Days = datas['Days'].tolist()
                 # data_fix = {}
                 # for i in range(len(label)):
                 #     data_fix['Month'] = month
@@ -119,7 +119,7 @@ with tab4:
                 fig, ax = plt.subplots(figsize=(10, 5))
                 ax.grid(True)
                 # for i in range(len(datas)):
-                ax.plot(month)
+                ax.plot(index)
                 ax.set_xlabel('Month')
                 ax.set_ylabel('Beer Production')
                 ax.set_title('Prediksi Produksi Beer')
