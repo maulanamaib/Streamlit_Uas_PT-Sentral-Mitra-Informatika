@@ -100,7 +100,7 @@ with tab3:
     if submit :
         if model == "K-Neighbors Regressor":
             st.write(knn)
-        elif model == "Bagging Regressor":
+        elif model == "Stacking Regressor":
             st.write(bgr)
         elif model == "Random Forest Regressor":
             st.write(rf)
