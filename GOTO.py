@@ -94,7 +94,7 @@ with tab3:
         model = st.radio("""Metode Regresi yang digunakan :""",("K-Neighbors Regressor", "Bagging Regressor", "Random Forest Regressor"))
     columns = st.columns((2, 0.6, 2))
     submit = columns[1].button("Submit")
-    knn = joblib.load('model/Knn.pkl')
+    knn = joblib.load('model/KNN.pkl')
     bgr = joblib.load('model/BaggingRegressor.pkl')
     rf = joblib.load('model/RandomForest.pkl')
     if submit :
