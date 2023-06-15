@@ -92,7 +92,7 @@ with tab4:
     if cek :
         # mengambil date month dan year
             date = pd.to_datetime(date)
-            date = date.strftime("%Y-%m")
+            date = date.strftime("%Y-%m-%d")
             # jika date < 2023-01 maka akan mengambil dari csv yang sudah ada
             if date <= '2029-06':
                 data = pd.read_csv("data/prediksiluck.csv")                
