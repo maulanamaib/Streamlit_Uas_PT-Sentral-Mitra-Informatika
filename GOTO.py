@@ -71,7 +71,7 @@ with tab3:
     columns = st.columns((2, 0.6, 2))
     submit = columns[1].button("Submit")
     knn = joblib.load('model/KNN.pkl')
-    bgr = joblib.load('model/BaggingRegressor.pkl')
+    bgr = joblib.load('model/LinearRegression.pkl')
     rf = joblib.load('model/RandomForest.pkl')
     if submit :
         if model == "K-Neighbors Regressor":
