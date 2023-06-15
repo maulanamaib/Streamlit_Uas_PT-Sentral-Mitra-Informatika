@@ -74,11 +74,11 @@ with tab3:
     rf = joblib.load('model/RandomForest.pkl')
     if submit :
         if model == "K-Neighbors Regressor":
-            st.write(str(knn))
+            st.succes(str(knn))
         elif model == "Stacking Regressor":
-            st.write(str(bgr))
+            st.succes(str(bgr))
         elif model == "Random Forest Regressor":
-            st.write(str(rf))
+            st.succes(str(rf))
         # st.write("ok")
 with tab4:
     st.write("")
