@@ -1,13 +1,8 @@
-# import libary 
 import streamlit as st
 import joblib
-# import dataset
 import datetime
 import time
 import webbrowser
-# import BaggingRegersion
-# import RandomForest
-# import knn
 from pathlib import Path
 import pandas as pd
 import numpy as np
