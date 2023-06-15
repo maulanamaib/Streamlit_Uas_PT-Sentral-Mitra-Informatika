@@ -3,6 +3,7 @@ import joblib
 import datetime
 import time
 import webbrowser
+import matplotlib.pyplot as plt
 from pathlib import Path
 import pandas as pd
 import numpy as np
@@ -84,7 +85,8 @@ with tab4:
     st.write("")
     st.markdown("<h1 style='text-align: center; color: white; margin:0 ; padding:0;'>Prediksi Saham GOTO</h1>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center; color: white;'>Harap Diisi Semua Kolom</p>", unsafe_allow_html=True)
-    date = st.date_input("Masukkan Tanggal:",datetime.date(2023, 1, 1))
+    date = st.date_input("Masukkan Tanggal:",datetime.date(2023, 9, 1))
+    st.write("Range input from: 2023-0901 to 2029-12-30")
     columns = st.columns((2, 0.6, 2))
     cek = columns[1].button("submit")
     if cek :
@@ -107,17 +109,17 @@ with tab4:
                
                 # # pisahkan month ke dalam list
                 month = datas['Month'].tolist()
-                data_fix = {}
-                for i in range(len(label)):
-                    data_fix['Month'] = month
-                    data_fix[label[i]] = data_select[i]
+                # data_fix = {}
+                # for i in range(len(label)):
+                #     data_fix['Month'] = month
+                #     data_fix[label[i]] = data_select[i]
                     # memasukkan bulan ke dalam data_fix
                 
                 # membuat plt untuk menampilkan hasil prediksi
                 fig, ax = plt.subplots(figsize=(10, 5))
                 ax.grid(True)
-                for i in range(len(label)):
-                    ax.plot(month, data_fix[label[i]], label=label[i])
+                # for i in range(len(datas)):
+                ax.plot(month)
                 ax.set_xlabel('Month')
                 ax.set_ylabel('Beer Production')
                 ax.set_title('Prediksi Produksi Beer')
@@ -125,7 +127,7 @@ with tab4:
                 st.pyplot(fig)
 
                 # # menampilkan hasil prediksi data_fix pada st.table
-                datas = pd.DataFrame(data_fix)
+                datas = pd.DataFrame(datas)
                 st_date = datas.head(1)['Month'].values[0]
                 en_date = datas.tail(1)['Month'].values[0]
                 st.markdown(f"<h3 style='text-align: center; color: white; margin:0 ; padding:0;'>Hasil Prediksi Produksi Beer Pada {st_date} - {en_date}</h3>", unsafe_allow_html=True)
