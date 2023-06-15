@@ -80,8 +80,8 @@ with tab2:
         nomalisasi = st.radio("Normalisasi yang digunakan",("MinMax Scaler", "Reduksi dimensi"))
     colom = st.columns((2, 0.6, 2))
     run = colom[1].button("run  ")
-    Mm = joblib.load('MinMax.pkl')
-    rd = joblib.load('ReDim.pkl')
+    Mm = joblib.load('model/MinMax.pkl')
+    rd = joblib.load('model/ReDim.pkl')
     if run :
         if nomalisasi == "MinMax Scaler":
             st.write(Mm)
@@ -95,8 +95,8 @@ with tab3:
     columns = st.columns((2, 0.6, 2))
     submit = columns[1].button("Submit")
     knn = joblib.load('knn.pkl')
-    bgr = joblib.load('BaggingRegressor.pkl')
-    rf = joblib.load('RandomForest.pkl')
+    bgr = joblib.load('model/BaggingRegressor.pkl')
+    rf = joblib.load('model/RandomForest.pkl')
     if submit :
         if model == "K-Neighbors Regressor":
             st.write(knn)
