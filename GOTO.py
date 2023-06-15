@@ -98,7 +98,7 @@ with tab4:
                 data = pd.read_csv("data/prediksiluck.csv")                
                 # get index dari date yang diinput di data
                 
-                index = data[data['Month'] == date].index.values.astype(int)[0]
+                index = data[data['Days'] == date].index.values.astype(int)[0]
                 # index = data['Month'] == date
 
                 # jika index + 10 > 339 maka mengambil data dari index sampai 339 - 10
