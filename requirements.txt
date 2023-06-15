@@ -1,0 +1,17 @@
+pandas==1.5.1
+joblib==1.2.0
+python-time
+streamlit
+streamlit-option-menu
+scikit-learn==1.1.3
+pathlib==1.0.1
+numpy
+pandas
+pillow
+requests
+requests_html
+matplotlib==3.6.2
+streamlit-modal
+pip
+PyScript
+pymongo
