@@ -79,7 +79,7 @@ with tab2:
     with st.expander("Normalizer"):
         nomalisasi = st.radio("Normalisasi yang digunakan",("MinMax Scaler", "Reduksi dimensi"))
     colom = st.columns((2, 0.6, 2))
-    run = colom[1].button("run  ")
+    run = colom[1].button("run")
     Mm = joblib.load('model/MinMax.pkl')
     rd = joblib.load('model/ReDim.pkl')
     if run :
@@ -94,7 +94,7 @@ with tab3:
         model = st.radio("""Metode Regresi yang digunakan :""",("K-Neighbors Regressor", "Bagging Regressor", "Random Forest Regressor"))
     columns = st.columns((2, 0.6, 2))
     submit = columns[1].button("Submit")
-    knn = joblib.load('model/KNN.pkl')
+    knn = joblib.load('model/Knn.pkl')
     bgr = joblib.load('model/BaggingRegressor.pkl')
     rf = joblib.load('model/RandomForest.pkl')
     if submit :
