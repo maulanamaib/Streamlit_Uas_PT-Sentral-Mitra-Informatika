@@ -66,42 +66,14 @@ st.markdown(' <div style="position: fixed; top: 0; left: 0; z-index: 9999; width
 tab1, tab2, tab3, tab4 = st.tabs(["Data", "Processing Data", "Modelling", "Implementasi"])
 with tab1:
     kolom = st.columns((1 , 1.5))   
-#     url = 'https://github.com/maulanamaib/streamlit_hepa.git'
-
-#     if kolom[1].button('GitHub'):
-#         webbrowser.open_new_tab(url)
-
-   
-  
-    # home = kolom[1].button('Home')
-#     about = kolom[2].button('About')
-
-   
-#     kolom[4].button('Click Me!', 'https://maulanamaib.github.io/datamining/intro.html')
-
-#     link = 'https://maulanamaib.github.io/datamining/intro.html'
-
-#     if kolom[4].button('Jupyter'):
-#         webbrowser.open_new_tab(link)
-
-    # home page
-#     if home==False and about==False or home==True and about==False:
-        
-    
-
-    
-  
-          
-           
-    # about page
-#     if about==True and home==False:
-#         st.markdown("<h1 style='text-align: center; color: white; margin:0 ; padding:0;'>Tentang Sistem ini</h1>", unsafe_allow_html=True)
-#         st.write('Sistem Predeksi Penyakit hepa adalah sebuah sistem yang bertujuan untuk memprediksi penyakit hepa. Sistem ini dibuat menggunakan bahasa pemrograman python dan library streamlit.')
-#         st.markdown("<p  color: white;'>Pada sistem ini menggunakan model KNN ( <i>K-nearest neighbors algorithm</i> ) dengan parameter <b>K = 3</b> . Dataset yang digunakan memiliki <b>5 fitur</b> termasuk kelas.</p>", unsafe_allow_html=True)
-#         st.write('Alasan menggunakan model KNN dengan parameter k = 3 adalah karena memiliki akurasi yang terbesar dari model lainnya pada dataset ini, sehingga diputuskan untuk menggunakan model tersebut.')
-#         st.write("Disini range umur mempengaruhi prediksi kemungkinan terkenanya penyakit hepa")
-#         st.markdown("<b>Alanine transminase (ALT), yaitu enzim yang mengubah protein menjadi energi untuk digunakan oleh sel-sel hati<b>",unsafe_allow_html=True)
-#         st.markdown("<b>Alanine transminase (ALT), yaitu enzim yang mengubah protein menjadi energi untuk digunakan oleh sel-sel hati<b>",unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: white; margin:0 ; padding:0;'>Tentang Sistem ini</h1>", unsafe_allow_html=True)
+    st.write('Sistem ini dibuat untuk membantu memprediksi saham dari perusahaan GOTO dengan menggunakan bahasa python dan frame web streamlit.')
+    st.markdown("<p  color: white;'>Pada sistem ini menggunakan model Random Forest Regression ( <i>Random Forest Regression algorithm</i> ) dengan parameter <b>max_depth=d</b> . Dataset yang digunakan memiliki <b>6 fitur</b> termasuk Volume yang digunakan untuk fitur prediksi.</p>", unsafe_allow_html=True)
+    st.write('Alasan menggunakan model Random Forest Regression dengan parameter <b>max_depth=d</b> adalah karena memiliki akurasi yang terbaik dari model lainnya pada dataset ini, sehingga diputuskan untuk menggunakan model tersebut.')
+    st.write("Disini range tahun mempengaruhi prediksi saham ke depannya tergantuung parameter yang digunakan.")
+    st.write("Data ini diperoleh dari https://finance.yahoo.com/quote/LUCK.JK/history?p=LUCK.JK.")
+    st.markdown("<b>Volume, menunjukkan jumlah saham atau kontrak yang diperdagangkan pada tanggal tertentu<b>",unsafe_allow_html=True)
+    st.markdown("<b>Date, menunjukkan tanggal tertentu<b>",unsafe_allow_html=True)
 
 with tab2:
     with st.expander("Normalizer"):
