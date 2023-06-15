@@ -71,7 +71,7 @@ with tab3:
     columns = st.columns((2, 0.6, 2))
     submit = columns[1].button("Submit")
     knn = joblib.load('model/KNN.pkl')
-    bgr = joblib.load('model/BaggingRegressor.pkl')
+    bgr = joblib.load('model/LinearRegression.pkl')
     rf = joblib.load('model/RandomForest.pkl')
     if submit :
         if model == "K-Neighbors Regressor":
@@ -130,7 +130,7 @@ with tab4:
                 datas = pd.DataFrame(datas)
                 st_date = datas.head(1)['Month'].values[0]
                 en_date = datas.tail(1)['Month'].values[0]
-                st.markdown(f"<h3 style='text-align: center; color: white; margin:0 ; padding:0;'>Hasil Prediksi Produksi Beer Pada {st_date} - {en_date}</h3>", unsafe_allow_html=True)
+                st.markdown(f"<h3 style='text-align: center; color: white; margin:0 ; padding:0;'>Hasil Prediksi Saham Goto Pada {st_date} - {en_date}</h3>", unsafe_allow_html=True)
                 datas = datas.style.set_properties(**{'text-align': 'center'})
                 datas = datas.set_table_styles([ dict(selector='th', props=[('text-align', 'center')] ) ])
                 st.table(datas)
