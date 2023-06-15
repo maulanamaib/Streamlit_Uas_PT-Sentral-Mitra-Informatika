@@ -54,7 +54,7 @@ with tab2:
     with st.expander("Normalizer"):
         nomalisasi = st.radio("Normalisasi yang digunakan",("MinMax Scaler", "Reduksi dimensi"))
     colom = st.columns((2, 0.6, 2))
-    run = colom[1].button("run")
+    run = colom[1].button("Submit")
     Mm = joblib.load('model/MinMax.pkl')
     rd = joblib.load('model/ReDim.pkl')
     if run :
