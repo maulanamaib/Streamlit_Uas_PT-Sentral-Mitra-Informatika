@@ -88,4 +88,54 @@ with tab4:
     columns = st.columns((2, 0.6, 2))
     cek = columns[1].button("submit")
     if cek :
-        st.write("cek")
+        # mengambil date month dan year
+            date = pd.to_datetime(date)
+            date = date.strftime("%Y-%m")
+            # jika date < 2023-01 maka akan mengambil dari csv yang sudah ada
+            if date <= '2029-06':
+                data = pd.read_csv("data/prediksiluck.csv")                
+                # get index dari date yang diinput di data
+                
+                index = data[data['Month'] == date].index.values.astype(int)[0]
+                # index = data['Month'] == date
+
+                # jika index + 10 > 339 maka mengambil data dari index sampai 339 - 10
+                if index + 10 > 339:
+                    datas = data.iloc[339-9:340]
+                else:
+                    datas = data.iloc[index:index+10]
+               
+                # # pisahkan month ke dalam list
+                month = datas['Month'].tolist()
+                data_fix = {}
+                for i in range(len(label)):
+                    data_fix['Month'] = month
+                    data_fix[label[i]] = data_select[i]
+                    # memasukkan bulan ke dalam data_fix
+                
+                # membuat plt untuk menampilkan hasil prediksi
+                fig, ax = plt.subplots(figsize=(10, 5))
+                ax.grid(True)
+                for i in range(len(label)):
+                    ax.plot(month, data_fix[label[i]], label=label[i])
+                ax.set_xlabel('Month')
+                ax.set_ylabel('Beer Production')
+                ax.set_title('Prediksi Produksi Beer')
+                ax.legend()
+                st.pyplot(fig)
+
+                # # menampilkan hasil prediksi data_fix pada st.table
+                datas = pd.DataFrame(data_fix)
+                st_date = datas.head(1)['Month'].values[0]
+                en_date = datas.tail(1)['Month'].values[0]
+                st.markdown(f"<h3 style='text-align: center; color: white; margin:0 ; padding:0;'>Hasil Prediksi Produksi Beer Pada {st_date} - {en_date}</h3>", unsafe_allow_html=True)
+                datas = datas.style.set_properties(**{'text-align': 'center'})
+                datas = datas.set_table_styles([ dict(selector='th', props=[('text-align', 'center')] ) ])
+                st.table(datas)
+            else:
+                st.warning("Tanggal yang anda masukkan melebihi batas , Masih dalam tahap pengembangan ❤️")
+
+                
+        # else:
+        #     st.warning("Pilih Metode Regresi")
+        # st.write("cek")
