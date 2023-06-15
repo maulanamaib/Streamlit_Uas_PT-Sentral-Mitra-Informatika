@@ -65,7 +65,7 @@ with tab2:
         # st.write("ok") 
 
 with tab3:
-    with st.expander("Setting"):
+    with st.expander("Model"):
         model = st.radio("""Metode Regresi yang digunakan :""",("K-Neighbors Regressor", "Stacking Regressor", "Random Forest Regressor"))
     columns = st.columns((2, 0.6, 2))
     submit = columns[1].button("Submit")
