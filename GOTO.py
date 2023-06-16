@@ -47,7 +47,7 @@ with tab1:
     st.markdown("<p  color: white;'>Pada sistem ini menggunakan model Random Forest Regression ( <i>Random Forest Regression algorithm</i> ) dengan parameter <b>max_depth=d</b> . Dataset yang digunakan memiliki <b>6 fitur</b> termasuk Volume yang digunakan untuk fitur prediksi.</p>", unsafe_allow_html=True)
     st.write('Alasan menggunakan model Random Forest Regression dengan parameter <b>max_depth=d</b> adalah karena memiliki akurasi yang terbaik dari model lainnya pada dataset ini, sehingga diputuskan untuk menggunakan model tersebut.')
     st.write("Disini range tahun mempengaruhi prediksi saham ke depannya tergantuung parameter yang digunakan.")
-    st.write("Data ini diperoleh dari https://finance.yahoo.com/quote/LUCK.JK/history?p=LUCK.JK.")
+    st.write("Data ini diperoleh dari https://finance.yahoo.com/quote/GOTO.JK/history?p=GOTO.JK.")
     st.markdown("<b>Volume, menunjukkan jumlah saham atau kontrak yang diperdagangkan pada tanggal tertentu<b>",unsafe_allow_html=True)
     st.markdown("<b>Date, menunjukkan tanggal tertentu<b>",unsafe_allow_html=True)
 
