@@ -10,7 +10,7 @@ pandas
 pillow
 requests
 requests_html
-matplotlib==3.6.2
+matplotlib==3.9.0
 streamlit-modal
 pip
 PyScript
